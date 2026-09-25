@@ -16,19 +16,20 @@ import SignUp from "./pages/Auth/SignUp";
 import AuthLayout from "./pages/Layout/AuthLayout";
 
 export const router = createBrowserRouter([
+
   {
     path: "/",
     element: <AuthLayout />,
     children: [
       {
-        path: "sign-in",
-        element: <SignIn />,
+        index: true,
+        element: <SignIn />
       },
       {
-        path: "sign-up",
-        element: <SignUp />,
-      },
-    ],
+        path: "/sign-up",
+        element: <SignUp />
+      }
+    ]
   },
   {
     path: "/user",
